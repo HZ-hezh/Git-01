@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羊了个羊</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>羊了个羊</h1>
+            <div class="game-info">
+                <div class="level">关卡: <span id="level">1</span></div>
+                <div class="moves">步数: <span id="moves">0</span></div>
+            </div>
+        </div>
+        
+        <div class="game-board" id="game-board">
+            <!-- 游戏卡片将在这里动态生成 -->
+        </div>
+        
+        <div class="slot-container">
+            <div class="slots" id="slots">
+                <!-- 底部槽位将在这里动态生成 -->
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="restart-btn">重新开始</button>
+            <button id="next-level-btn" style="display: none;">下一关</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="win-modal">
+        <div class="modal-content">
+            <h2>恭喜过关！</h2>
+            <p>你用了 <span id="win-moves">0</span> 步完成了关卡</p>
+            <button id="next-level-modal-btn">下一关</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="game-over-modal">
+        <div class="modal-content">
+            <h2>游戏结束</h2>
+            <p>槽位已满，无法继续游戏</p>
+            <button id="retry-btn">重新尝试</button>
+        </div>
+    </div>
+    
+    <script src="./js/game.js"></script>
+</body>
+</html>
